@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style src="vine.css"></style>
+
+    <script src="js/main.js"></script>
+    <script src="js/js-vine.js"></script>
+    <script src="js/ensemble.js"></script>
+    <script>
+        document.addEventListener('ensembleLoaded', function (e) {
+            var loadResult = ensemble.init();
+            console.log(loadResult);
+        }, false);
+    </script>
+</head>
+<body onload="initNovel(800, 600);">
+<div id="debug"></div>
+<div id="novelDiv">
+    <div style="position: absolute;
+        left:0; top: 0; z-index:-1">
+        <img id="background0" src="images/empty.png">
+    </div>
+    <div style="position: absolute;
+        left:0; top: 0; z-index:-1">
+        <img id="background1" src="images/empty.png">
+    </div>
+    <div id="dialogDiv" style="z-index:100">
+    </div>
+</div>
+
+<p style="text-align:center">
+    <input type="button" value="Restart the Novel"
+           onclick="initNovel(800, 600)"/>
+</p>
+
+</body>
+</html>
